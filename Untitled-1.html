@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .icon-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .icon {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .list {
+        position: absolute;
+        top: 100%;
+        left: -100%; /* Start off-screen to the left */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: opacity 0.3s ease, left 0.3s ease;
+      }
+      .list {
+        transition: opacity 0.3s ease 0.1s, left 0.3s ease 0.1s; /* 0.1s delay */
+      }
+      .icon-container:hover .list {
+        left: 0; /* Move to the original position */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icon-container">
+      <div class="icon">☰</div>
+      <!-- Replace with your icon -->
+      <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+  </body>
+</html>
